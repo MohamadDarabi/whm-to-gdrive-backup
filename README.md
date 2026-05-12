@@ -12,15 +12,9 @@ A production-ready Bash script designed for system administrators and developers
 * Root access to a WHM/cPanel server.
 * [Rclone](https://rclone.org/) installed and configured with a remote named `gdrive`.
 
-## 🚀 Installation
+## 🚀 Installation & Usage
 
-1. **Clone or Copy the script:**
-   Download `gdrive_sync.sh` to your `/root` directory.
-
-2. **Configure the Script:**
-   Edit the `EXCLUDE_USER` variable inside the script to skip any specific account.
-
-3. **Set Permissions:**
+1. **Set Permissions:**
    ```bash
    chmod +x /root/gdrive_sync.sh
    
@@ -40,8 +34,8 @@ MIT License - Created for the DevOps community.
 
 ---
 
-### ۲. محتوای فایل `gdrive_sync.sh` (کد اصلی اسکریپت)
-این کد اصلی است که عملیات بکاپ و انتقال را انجام می‌دهد. محتوای زیر را کپی و در فایل `gdrive_sync.sh` قرار دهید:
+### ۲. محتوای فایل `gdrive_sync.sh`
+این کد را در فایل دوم کپی کنید (فقط یادتان باشد نام اکانت استثنا را در خط ۹ اصلاح کنید):
 
 ```bash
 #!/bin/bash
@@ -51,7 +45,7 @@ MIT License - Created for the DevOps community.
 # -------------------------------------------------------------------------
 
 # --- CONFIGURATION ---
-EXCLUDE_USER="account_to_skip" # نام کاربری که نمیخواهید بکاپ گرفته شود را اینجا بنویسید
+EXCLUDE_USER="account_to_skip" # نام کاربری که نمی‌خواهید بکاپ گرفته شود
 BACKUP_DIR="/home/gdrive_temp"
 DATE_SUFFIX=$(date +%F)
 GDRIVE_REMOTE="gdrive:WHM_Backups/$DATE_SUFFIX"
